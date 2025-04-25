@@ -1,7 +1,7 @@
-# Critical Care Flow Management (CCFM) System
+# CANOPY CASH  Flow Management (CCFM) System
 
 ## Overview
-The Critical Care Flow Management (CCFM) System is a web-based application designed to streamline and optimize the management of critical care resources and patient flow in healthcare settings. This system helps healthcare providers efficiently manage patient care, resources, and workflows in critical care units.
+The CANOPY CASH Flow Management (CCFM) System is a web-based application designed to streamline and optimize the management of critical care resources and patient flow in healthcare settings. This system helps healthcare providers efficiently manage patient care, resources, and workflows in critical care units.
 
 ## Features
 - User Authentication System
