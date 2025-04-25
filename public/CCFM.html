@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCFM Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="/CCFM.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cash Conversion Flow Management Analysis</h1>
+        
+        <div class="input-section">
+            <h2>Financial Inputs</h2>
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="totalRevenue">Total Revenue ($)</label>
+                    <input type="number" id="totalRevenue" required>
+                </div>
+                <div class="input-group">
+                    <label for="subscriptionRevenue">Subscription Revenue ($)</label>
+                    <input type="number" id="subscriptionRevenue">
+                </div>
+                <div class="input-group">
+                    <label for="accountsReceivable">Accounts Receivable ($)</label>
+                    <input type="number" id="accountsReceivable" required>
+                </div>
+                <div class="input-group">
+                    <label for="totalCreditSales">Total Credit Sales ($)</label>
+                    <input type="number" id="totalCreditSales" required>
+                </div>
+                <div class="input-group">
+                    <label for="accountsPayable">Accounts Payable ($)</label>
+                    <input type="number" id="accountsPayable" required>
+                </div>
+                <div class="input-group">
+                    <label for="inventoryValue">Inventory Value ($)</label>
+                    <input type="number" id="inventoryValue">
+                </div>
+                <div class="input-group">
+                    <label for="cogs">Cost of Goods Sold ($)</label>
+                    <input type="number" id="cogs" required>
+                </div>
+                <div class="input-group">
+                    <label for="cashInflows">Daily Cash Inflows ($)</label>
+                    <input type="number" id="cashInflows" required>
+                </div>
+                <div class="input-group">
+                    <label for="cashOutflows">Daily Cash Outflows ($)</label>
+                    <input type="number" id="cashOutflows" required>
+                </div>
+                <div class="input-group">
+                    <label for="operatingExpenses">Operating Expenses ($)</label>
+                    <input type="number" id="operatingExpenses">
+                </div>
+                <div class="input-group">
+                    <label for="totalReserve">Total Reserve ($)</label>
+                    <input type="number" id="totalReserve">
+                </div>
+                <div class="input-group">
+                    <label for="usedReserve">Used Reserve ($)</label>
+                    <input type="number" id="usedReserve">
+                </div>
+                <div class="input-group">
+                    <label for="totalDebt">Total Debt ($)</label>
+                    <input type="number" id="totalDebt">
+                </div>
+                <div class="input-group">
+                    <label for="totalUsersStart">Total Users (Start)</label>
+                    <input type="number" id="totalUsersStart" required>
+                </div>
+                <div class="input-group">
+                    <label for="totalUsersEnd">Total Users (End)</label>
+                    <input type="number" id="totalUsersEnd">
+                </div>
+                <div class="input-group">
+                    <label for="churnedUsers">Churned Users</label>
+                    <input type="number" id="churnedUsers">
+                </div>
+                <div class="input-group">
+                    <label for="newUsersAcquired">New Users Acquired</label>
+                    <input type="number" id="newUsersAcquired">
+                </div>
+                <div class="input-group">
+                    <label for="totalAcquisitionCost">Total Acquisition Cost ($)</label>
+                    <input type="number" id="totalAcquisitionCost">
+                </div>
+            </div>
+            
+            <!-- Loading Spinner -->
+            <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing data...</p>
+            </div>
+            
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+            
+            <button id="analyzeBtn" class="analyze-btn">Analyze</button>
+        </div>
+
+        <div id="resultsSection" class="results-section" style="display: none;">
+            <h2>Analysis Results</h2>
+            <div class="charts-container">
+                <div id="cashFlowChart" class="chart"></div>
+                <div id="cccChart" class="chart"></div>
+                <div id="ltvCacChart" class="chart"></div>
+                <div id="burnRateRunwayChart" class="chart"></div>
+                <div id="financialHealthChart" class="chart"></div>
+                <div id="historicalTrendChart" class="chart"></div>
+            </div>
+            <div id="metricCards" class="metric-cards"></div>
+            
+            <!-- Recommendations Section -->
+            <div class="recommendations-section">
+                <h2>Recommendations</h2>
+                <div id="recommendationsContainer"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
